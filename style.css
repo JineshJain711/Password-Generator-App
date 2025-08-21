@@ -1,0 +1,174 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(173, 173, 75, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%);
+    padding: 1rem;
+}
+
+/* Title */
+h1 {
+    color: #fff;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Password Display */
+.display-container {
+    position: relative;
+    background-color: violet;
+    border-radius: 1rem;
+    border-bottom: 0.5rem solid rgb(96, 45, 185);
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.display {
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: hsl(58, 96%, 50%);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+}
+
+.display::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: hsl(0, 94%, 49%);
+    text-transform: uppercase;
+}
+
+/* Copy button */
+.display-container button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: hsl(0, 94%, 49%);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+[data-copyMsg] {
+    position: absolute;
+    top: -1.5rem;
+    right: 0.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+[data-copyMsg].active {
+    opacity: 1;
+}
+
+/* Input controls */
+.input-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid violet;
+}
+
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.length-container p:first-child {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.length-container p:last-child {
+    color: hsl(58, 96%, 50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Checkboxes */
+.input-container div {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+/* Strength Indicator */
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.strength-container p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.strength-indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: hsl(169, 5%, 53%);
+}
+
+/* Generate Button */
+.generateButton {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: hsl(0, 94%, 49%);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.generateButton:hover {
+    background-color: hsl(0, 94%, 40%);
+}
